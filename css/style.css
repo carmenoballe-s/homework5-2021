@@ -61,7 +61,7 @@ nav a{
 /*Req 2*/
 /*Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-nav a:hover, nav a:focus {
+nav a:hover {
   text-decoration: underline;
 }
 
@@ -82,7 +82,6 @@ nav a:hover, nav a:focus {
 /*Req 3b*/
 /*Write selector/rule property to position the skip class element*/
 .skip a:focus{
-  position: relative;
   top: 10px;
 }
 
@@ -130,32 +129,33 @@ header{
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
   /*Your Code Here*/
-  grid-column: 1/ span 4;
+  grid-column-start: 1;
+  grid-column-end: -1;
   max-height: 650px;
   overflow: hidden;
 }
 
 /*Req 7b & 8d*/
 .about, .about-image{
-   grid-row: 1;
+   grid-row: 1 / span 1;
 }
 
 /*Req 7b & 8d*/
 .method, .method-image{
    /*Your Code Here*/
-   grid-row: 2;
+   grid-row: 2 / span 1;
 }
 
 /*Req 7b & 8d*/
 .client, .client-image{
     /*Your Code Here*/
-   grid-row: 3;
+   grid-row: 3 / span 1;
 }
 
 /*Req 7b & 8d*/
 .contacts, .contact-image{
     /*Your Code Here*/
-   grid-row: 4;
+   grid-row: 4 / span 1;
 }
 
 /*Req 9*/
@@ -180,7 +180,6 @@ header{
     padding: 30px 0px;
     /*Your code here:*/
     text-align: right;
-    vertical-align: middle;
   }
 
   /*Req 11*/
